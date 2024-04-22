@@ -37,7 +37,8 @@ def upload_file(host, port, filename):
 {content_length}\r\n\r\n{file_data.decode()}"
         response = send_request(host, port, request)
     return response
-
+```
+```
 def download_file(host, port, filename):
     request = f"GET /{filename} HTTP/1.1\r\nHost: {host}\r\n\r\n"
     response = send_request(host, port, request)
